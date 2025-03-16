@@ -1,5 +1,4 @@
-// 1) Define the README contents as a string:
-const readmeMd = `# Achieva Full Scraper
+# what it does
 
 This script is designed to scrape transaction data from Achieva Credit Union’s
 web interface and automatically download it as a CSV file. It gathers both
