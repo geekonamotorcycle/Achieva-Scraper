@@ -33,22 +33,3 @@ transaction becomes exactly one CSV row.
 ## License
 
 Use or modify this script at your own discretion. No warranties provided.
-`;
-
-// 2) Create a Blob from that string and generate a “blob:” URL.
-const readmeBlob = new Blob([readmeMd], { type: "text/markdown" });
-const readmeUrl = URL.createObjectURL(readmeBlob);
-
-// 3) (Optional) Log that URL so you can inspect or open it manually if desired.
-console.log("README download link:", readmeUrl);
-
-// 4) Auto-trigger the download of README.md.
-const link = document.createElement("a");
-link.href = readmeUrl;
-link.download = "README.md";  // <-- The file name to be saved
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-
-// 5) Revoke the URL (good practice after download completes).
-URL.revokeObjectURL(readmeUrl);
